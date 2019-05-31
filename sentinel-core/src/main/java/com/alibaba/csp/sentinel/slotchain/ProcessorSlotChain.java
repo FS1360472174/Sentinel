@@ -20,7 +20,7 @@ package com.alibaba.csp.sentinel.slotchain;
  *
  * @author qinan.qn
  */
-public abstract class ProcessorSlotChain extends AbstractLinkedProcessorSlot<Object> {
+public abstract class  ProcessorSlotChain extends AbstractLinkedProcessorSlot<Object> {
 
     /**
      * Add a processor to the head of this slot chain.

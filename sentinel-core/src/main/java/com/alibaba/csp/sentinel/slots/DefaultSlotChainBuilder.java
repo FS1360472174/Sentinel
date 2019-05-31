@@ -29,7 +29,7 @@ import com.alibaba.csp.sentinel.slots.system.SystemSlot;
 
 /**
  * Builder for a default {@link ProcessorSlotChain}.
- *
+ * FANGZHANG-责任链模式
  * @author qinan.qn
  * @author leyou
  */

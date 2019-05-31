@@ -40,7 +40,7 @@ public class FlowThreadDemo {
 
     private static volatile boolean stop = false;
     private static final int threadCount = 100;
-
+    //fangzhang 为啥是+40
     private static int seconds = 60 + 40;
     private static volatile int methodBRunningTime = 2000;
 

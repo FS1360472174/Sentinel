@@ -32,7 +32,7 @@ import com.alibaba.csp.sentinel.slots.statistic.metric.Metric;
  * <li>metrics in minute level ({@code rollingCounterInMinute})</li>
  * <li>thread count</li>
  * </ol>
- *
+ *x
  * <p>
  * Sentinel use sliding window to record and count the resource statistics in real-time.
  * The sliding window infrastructure behind the {@link ArrayMetric} is {@code LeapArray}.

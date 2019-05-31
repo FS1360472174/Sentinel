@@ -23,6 +23,7 @@ import com.alibaba.csp.sentinel.context.Context;
 
 /**
  * Each {@link SphU}#entry() will return an {@link Entry}. This class holds information of current invocation:<br/>
+ * //fangzhang 一个entry包含创建时间，
  *
  * <ul>
  * <li>createTime, the create time of this entry, using for rt statistics.</li>

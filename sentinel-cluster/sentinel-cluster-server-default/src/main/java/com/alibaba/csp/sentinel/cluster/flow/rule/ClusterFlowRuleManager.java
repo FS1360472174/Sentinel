@@ -106,7 +106,7 @@ public final class ClusterFlowRuleManager {
         ClusterFlowRuleManager.propertySupplier = propertySupplier;
     }
 
-    /**
+    /**propertySupplier
      * Listen to the {@link SentinelProperty} for cluster {@link FlowRule}s.
      * The property is the source of cluster {@link FlowRule}s for a specific namespace.
      *

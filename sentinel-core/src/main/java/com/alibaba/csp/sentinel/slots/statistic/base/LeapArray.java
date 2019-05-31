@@ -174,6 +174,7 @@ public abstract class LeapArray<T> {
                  *
                  * If the start timestamp of old bucket is behind provided time, that means
                  * the bucket is deprecated. We have to reset the bucket to current {@code windowStart}.
+                 * the bucket is deprecated. We have to reset the bucket to current {@code windowStart}.
                  * Note that the reset and clean-up operations are hard to be atomic,
                  * so we need a update lock to guarantee the correctness of bucket update.
                  *
