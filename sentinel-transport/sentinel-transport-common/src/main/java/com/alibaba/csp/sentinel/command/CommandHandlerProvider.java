@@ -26,7 +26,7 @@ import com.alibaba.csp.sentinel.util.StringUtil;
 /**
  * Provides and filters command handlers registered via SPI.
  *
- * @author Eric Zhao
+ * @author Eric ZhaoserviceLoader
  */
 public class CommandHandlerProvider implements Iterable<CommandHandler> {
 

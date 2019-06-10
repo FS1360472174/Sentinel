@@ -84,7 +84,7 @@ public class HttpEventTask implements Runnable {
             }
 
             // Find the matching command handler.
-            CommandHandler<?> commandHandler = SimpleHttpCommandCenter.getHandler(commandName);
+            CommandHandler commandHandler = SimpleHttpCommandCenter.getHandler(commandName);
             if (commandHandler != null) {
                 CommandResponse<?> response = commandHandler.handle(request);
                 handleResponse(response, printWriter, outputStream);
