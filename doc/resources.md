@@ -33,36 +33,19 @@ class CtEntry extends Entry {
     protected Context context;
 ```
 
+DefaultNode与EntryNode有啥区别呢
+
 // 构建一个上下文
 ContextUtil.enter(contextName);
 
 
-SPH (Smoothed Particle Hydrodynamics)是平滑粒子流体动力学方法是缩写
-Sph 创建Entry的方法
+NodeSelectorSlot 建立不同资源间的调用的关系，并且通过 ClusterNodeBuilderSlot 记录每个资源的实时统计信息。
 
-SphU 与SphO的区别
+调用方和调用链路的区别
+https://github.com/alibaba/Sentinel/wiki/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6
 
-SphO会catch，返回true/false
-```
- public static boolean entry(String name, EntryType type, int count, Object... args) {
-        try {
-            Env.sph.entry(name, type, count, args);
-        } catch (BlockException e) {
-            // 系统降级了blocked by Sentinel due to flow control, degraded or system guard
-            return false;
-        } catch (Throwable e) {
-           // 这地方为什么catch Throwable，还返回true呢
-            RecordLog.info("[Sentinel] Fatal error", e);
-            return true;
-        }
-        return true;
-    }
-```
 
-Throwable是由ProcessorSlot扔出来的
+设计的不好的地方，很多的地方定义String类型，然后不好区分是context,还是resource
 
-```
- void entry(Context context, ResourceWrapper resourceWrapper, T param, int count, boolean prioritized,
-               Object... args) throws Throwable;
 
-```
+很多的限流都是基于资源的ResourceWrapper，
